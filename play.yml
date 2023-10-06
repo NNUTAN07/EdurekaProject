@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   become: yes
-  play: play1
+  name: play1
   tasks:
     - name: creating a image and run it as a container
       command: sudo docker build -f Dockerfile -t nutan69/edurekaproject:$BUILD_NUMBER
