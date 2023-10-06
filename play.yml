@@ -4,7 +4,8 @@
   name: play1
   tasks:
     - name: creating a image and run it as a container
-      command: docker build -f Dockerfile -t nutan69/edurekaproject .
-      #command: sudo docker login -u nutan69 -p nutanni@69
-      #command: sudo docker push nutan69/edurekaproject
+      docker_image:
+              path: /var/lib/jenkins/workspace/EdurekaProject
+              name: nutan69/edurekaproject
+              tag: v1
       
