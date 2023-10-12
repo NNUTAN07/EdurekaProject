@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 2
   selector:
-   MatchLabels:
+   matchLabels:
            app: edureka
   template:
     metadata:
@@ -13,6 +13,7 @@ spec:
         labels:
            app: edureka
      spec:
+      containers:
        - name: edureka-cont
          image: nutan609/edurekaproject
          ports:
