@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: edureka-deployment
+spec:
+  replicas: 2
+  selector:
+   MatchLabels:
+           app: edureka
+  template:
+    metadata:
+        name: edureka-pod
+        labels:
+           app: edureka
+     spec:
+       - name: edureka-cont
+         image: nutan609/edurekaproject
+         ports:
+           - containerPort: 8080
