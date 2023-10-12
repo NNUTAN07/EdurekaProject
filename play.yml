@@ -3,5 +3,13 @@
   become: yes
   name: play1
   tasks:
-    - name: creating a image and run it as a container
-      command: docker build -f Dockerfile -t nutan69/edurekaproject:cli .
+    - name: creating a image and push to docker hub
+      docker_image:
+             build:
+              path: /var/lib/jenkins/workspace/EdurekaProject/Dockerfile
+              name: nutan69/edurekaproject
+              source: build
+              push: true
+              tags: v1
+      - name: creating a deployment and service
+        command: kubectl create -f deploy.yml
