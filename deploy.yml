@@ -18,6 +18,8 @@ spec:
          image: nutan69/edurekaproject
          ports:
            - containerPort: 8080
+      imagePullSecrets:
+        - name: regcred
       tolerations:
        - key: node-role.kubernetes.io/master
          operator: Exists
