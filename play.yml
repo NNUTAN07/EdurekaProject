@@ -12,4 +12,4 @@
              push: true
       tags: v1
     - name: creating a deployment and service
-      command: kubectl create -f deploy.yml
+      command: kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f deploy.yml
