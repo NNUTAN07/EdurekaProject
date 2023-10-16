@@ -18,6 +18,10 @@ spec:
          image: nutan69/edurekaproject
          ports:
            - containerPort: 8080
+      tolerations:
+       - key: node-role.kubernetes.io/master
+         operator: Exists
+         effect: NoSchedule
 
 ---          
 apiVersion: v1
