@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
        - name: edureka-cont
-         image: nutan609/edurekaproject
+         image: nutan69/edurekaproject
          ports:
            - containerPort: 8080
 
