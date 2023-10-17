@@ -11,9 +11,9 @@
              source: build
              push: true
       tags: v1
-    - name: create a secret for private repository images
-      command: kubectl create -f secret.yml
-      tags: v2
+    - #name: create a secret for private repository images
+      #command: kubectl create -f secret.yml
+      #tags: v2
     - name: creating a deployment and service
       command: kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f deploy.yml
       tags: v3
