@@ -6,7 +6,7 @@
     - name: creating a image and push to docker hub
       docker_image:
              build:
-                path: /var/lib/jenkins/workspace/EdurekaProject
+                path: /home/ubuntu/workspace/EdurekaProject
              name: nutan69/edurekaproject
              source: build
              push: true
